@@ -565,7 +565,8 @@
         title: "Final Thought",
         leftHtml: `
           <div id="final-thought-container" style="min-height: 200px; margin-top:2rem;"></div>
-          <button class="btn fade-in delay-2" style="display:none; font-size:1.2rem; padding:1.2rem 2.5rem; border-width:2px;" id="restart-btn" onclick="location.reload()">Restart Experience</button>
+          <button class="btn fade-in delay-2" style="display:none; font-size:1.2rem; padding:1.2rem 2.5rem; border-width:2px; margin-right: 1rem;" id="restart-btn" onclick="location.reload()">Restart Experience</button>
+          <a href="https://github.com/UAnjana000/FEDGATE-Distributed-ML-systems-in-Finance" target="_blank" class="btn fade-in delay-2" style="display:none; font-size:1.2rem; padding:1.2rem 2.5rem; border-width:2px;" id="final-github-btn">View GitHub Repo</a>
         `,
         rightTextLines: [],
         leftLines: [
@@ -657,6 +658,8 @@
             setTimeout(() => { 
                 const btn = document.getElementById('restart-btn');
                 if(btn) btn.style.display = 'inline-block'; 
+                const ghBtn = document.getElementById('final-github-btn');
+                if(ghBtn) ghBtn.style.display = 'inline-block'; 
             }, 800);
         }
       } else if (step.leftHtml) {
