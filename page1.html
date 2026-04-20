@@ -565,8 +565,11 @@
         title: "Final Thought",
         leftHtml: `
           <div id="final-thought-container" style="min-height: 200px; margin-top:2rem;"></div>
-          <button class="btn fade-in delay-2" style="display:none; font-size:1.2rem; padding:1.2rem 2.5rem; border-width:2px; margin-right: 1rem;" id="restart-btn" onclick="location.reload()">Restart Experience</button>
-          <a href="https://github.com/UAnjana000/FEDGATE-Distributed-ML-systems-in-Finance" target="_blank" class="btn fade-in delay-2" style="display:none; font-size:1.2rem; padding:1.2rem 2.5rem; border-width:2px;" id="final-github-btn">View GitHub Repo</a>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+            <button class="btn fade-in delay-2" style="display:none; font-size:1.1rem; padding:1rem 2rem; border-width:2px;" id="restart-btn" onclick="location.reload()">Restart Experience</button>
+            <a href="https://github.com/UAnjana000/FEDGATE-Distributed-ML-systems-in-Finance" target="_blank" class="btn fade-in delay-2" style="display:none; font-size:1.1rem; padding:1rem 2rem; border-width:2px;" id="final-github-btn">View GitHub Repo</a>
+            <a href="index.html" class="btn fade-in delay-2" style="display:none; font-size:1.1rem; padding:1rem 2rem; border-width:2px;" id="home-btn">Go Home</a>
+          </div>
         `,
         rightTextLines: [],
         leftLines: [
@@ -660,6 +663,8 @@
                 if(btn) btn.style.display = 'inline-block'; 
                 const ghBtn = document.getElementById('final-github-btn');
                 if(ghBtn) ghBtn.style.display = 'inline-block'; 
+                const hmBtn = document.getElementById('home-btn');
+                if(hmBtn) hmBtn.style.display = 'inline-block';
             }, 800);
         }
       } else if (step.leftHtml) {
