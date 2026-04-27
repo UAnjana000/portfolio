@@ -333,7 +333,12 @@
           "> Loading Distributed Intelligence...",
           "> Connecting to Repository..."
         ],
-        leftHtml: `<a href="https://github.com/UAnjana000/FEDGATE-Distributed-ML-systems-in-Finance" target="_blank" class="btn fade-in delay-2" style="display:none; margin-top:3rem;" id="github-btn">View GitHub Repository</a>`,
+        leftHtml: `
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 3rem;">
+            <a href="https://github.com/UAnjana000/FEDGATE-Distributed-ML-systems-in-Finance" target="_blank" class="btn fade-in delay-2" style="display:none; margin-top:0;" id="github-btn">View GitHub Repository</a>
+            <a href="http://fedgate-web-alb-649632102.ap-south-1.elb.amazonaws.com/" target="_blank" class="btn fade-in delay-2" style="display:none; margin-top:0;" id="aws-btn">View Live App</a>
+          </div>
+        `,
         rightTextLines: [],
         robotClass: "action-point-left"
       },
@@ -568,6 +573,7 @@
           <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
             <button class="btn fade-in delay-2" style="display:none; font-size:1.1rem; padding:1rem 2rem; border-width:2px;" id="restart-btn" onclick="location.reload()">Restart Experience</button>
             <a href="https://github.com/UAnjana000/FEDGATE-Distributed-ML-systems-in-Finance" target="_blank" class="btn fade-in delay-2" style="display:none; font-size:1.1rem; padding:1rem 2rem; border-width:2px;" id="final-github-btn">View GitHub Repo</a>
+            <a href="http://fedgate-web-alb-649632102.ap-south-1.elb.amazonaws.com/" target="_blank" class="btn fade-in delay-2" style="display:none; font-size:1.1rem; padding:1rem 2rem; border-width:2px;" id="final-aws-btn">View Live App</a>
             <a href="index.html" class="btn fade-in delay-2" style="display:none; font-size:1.1rem; padding:1rem 2rem; border-width:2px;" id="home-btn">Go Home</a>
           </div>
         `,
@@ -646,6 +652,8 @@
             setTimeout(() => { 
                 const btn = document.getElementById('github-btn');
                 if(btn) btn.style.display = 'inline-block'; 
+                const awsBtn = document.getElementById('aws-btn');
+                if(awsBtn) awsBtn.style.display = 'inline-block'; 
             }, 500);
         } else if (index === steps.length - 1) { // Last step
             contentContainer.innerHTML += step.leftHtml; 
@@ -663,6 +671,8 @@
                 if(btn) btn.style.display = 'inline-block'; 
                 const ghBtn = document.getElementById('final-github-btn');
                 if(ghBtn) ghBtn.style.display = 'inline-block'; 
+                const awsBtn = document.getElementById('final-aws-btn');
+                if(awsBtn) awsBtn.style.display = 'inline-block'; 
                 const hmBtn = document.getElementById('home-btn');
                 if(hmBtn) hmBtn.style.display = 'inline-block';
             }, 800);
